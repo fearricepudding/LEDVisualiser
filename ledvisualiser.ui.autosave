@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LEDVisualiser</class>
+ <widget class="QMainWindow" name="LEDVisualiser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>663</width>
+    <height>297</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LEDVisualiser</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="toggleButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TOGGLE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gradient">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>621</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {color: qlineargradient(spread:pad, x1:0 y1:0, x2:1 y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));background: qlineargradient( x1:0 y1:0, x2:1 y2:0,stop:0 rgba(255,255,255,0),stop:0.01 rgba(255,255,255,0),stop:0.021 rgba(255,255,255,0),stop:0.031 rgba(255,255,255,0),stop:0.042 rgba(255,255,255,0),stop:0.052 rgba(255,255,255,0),stop:0.063 rgba(255,255,255,0),stop:0.073 rgba(255,255,255,0),stop:0.084 rgba(255,255,255,0),stop:0.094 rgba(255,255,255,0),stop:0.1 rgba(255,255,255,0),stop:0.12 rgba(255,255,255,0),stop:0.13 rgba(255,255,255,0),stop:0.14 rgba(255,255,255,0),stop:0.15 rgba(255,255,255,0),stop:0.16 rgba(255,255,255,0),stop:0.17 rgba(255,255,255,0),stop:0.18 rgba(255,255,255,0),stop:0.19 rgba(255,255,255,0),stop:0.2 rgba(255,255,255,0),stop:0.21 rgba(255,255,255,0),stop:0.22 rgba(255,255,255,0),stop:0.23 rgba(255,255,255,0),stop:0.24 rgba(255,255,255,0),stop:0.25 rgba(255,255,255,0),stop:0.26 rgba(255,255,255,0),stop:0.27 rgba(255,255,255,0),stop:0.28 rgba(255,255,255,0),stop:0.29 rgba(255,255,255,0),stop:0.3 rgba(255,255,255,0),stop:0.31 rgba(255,255,255,0),stop:0.32 rgba(255,255,255,0),stop:0.34 rgba(255,255,255,0),stop:0.35 rgba(255,255,255,0),stop:0.36 rgba(255,255,255,0),stop:0.37 rgba(255,255,255,0),stop:0.38 rgba(255,255,255,0),stop:0.39 rgba(255,255,255,0),stop:0.4 rgba(255,255,255,0),stop:0.41 rgba(255,255,255,0),stop:0.42 rgba(255,255,255,0),stop:0.43 rgba(255,255,255,0),stop:0.44 rgba(255,255,255,0),stop:0.45 rgba(255,255,255,0),stop:0.46 rgba(255,255,255,0),stop:0.47 rgba(255,255,255,0),stop:0.48 rgba(255,255,255,0),stop:0.49 rgba(255,255,255,0),stop:0.5 rgba(255,255,255,0),stop:0.51 rgba(255,255,255,0),stop:0.52 rgba(255,255,255,0),stop:0.53 rgba(255,255,255,0),stop:0.54 rgba(255,255,255,0),stop:0.55 rgba(255,255,255,0),stop:0.57 rgba(255,255,255,0),stop:0.58 rgba(255,255,255,0),stop:0.59 rgba(255,255,255,0),stop:0.6 rgba(255,255,255,0),stop:0.61 rgba(255,255,255,0),stop:0.62 rgba(255,255,255,0),stop:0.63 rgba(255,255,255,0),stop:0.64 rgba(255,255,255,0),stop:0.65 rgba(255,255,255,0),stop:0.66 rgba(255,255,255,0),stop:0.67 rgba(255,255,255,0),stop:0.68 rgba(255,255,255,0),stop:0.69 rgba(255,255,255,0),stop:0.7 rgba(255,255,255,0),stop:0.71 rgba(255,255,255,0),stop:0.72 rgba(255,255,255,0),stop:0.73 rgba(255,255,255,0),stop:0.74 rgba(255,255,255,0),stop:0.75 rgba(255,255,255,0),stop:0.76 rgba(255,255,255,0),stop:0.77 rgba(255,255,255,0),stop:0.79 rgba(255,255,255,0),stop:0.8 rgba(255,255,255,0),stop:0.81 rgba(255,255,255,0),stop:0.82 rgba(255,255,255,0),stop:0.83 rgba(255,255,255,0),stop:0.84 rgba(255,255,255,0),stop:0.85 rgba(255,255,255,0),stop:0.86 rgba(255,255,255,0),stop:0.87 rgba(255,255,255,0),stop:0.88 rgba(255,255,255,0),stop:0.89 rgba(255,255,255,0),stop:0.9 rgba(255,255,255,0),stop:0.91 rgba(255,255,255,0),stop:0.92 rgba(255,255,255,0),stop:0.93 rgba(255,255,255,0),stop:0.94 rgba(255,255,255,0),stop:0.95 rgba(255,255,255,0),stop:0.96 rgba(255,255,255,0),stop:0.97 rgba(255,255,255,0),stop:0.98 rgba(255,255,255,0),stop:0.99 rgba(255,255,255,0),stop:1 rgba(0,0,0,0));}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sendNewColButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>190</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SEND COLOURS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="updateLocalGrad">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>190</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>REFRESH</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>120</y>
+      <width>331</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QSpinBox" name="colR">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="colG">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QSpinBox" name="colB">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="setRangeColor">
+       <property name="text">
+        <string>set</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>621</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QSlider" name="fromSlider">
+       <property name="maximum">
+        <number>191</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QSlider" name="toSlider">
+       <property name="maximum">
+        <number>191</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>663</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLEDVisualiser">
+    <property name="title">
+     <string>LEDVisualiser</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuLEDVisualiser"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
