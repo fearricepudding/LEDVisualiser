@@ -5,7 +5,7 @@
     <name>LEDVisualiser</name>
     <message>
         <location filename="ledvisualiser.ui" line="14"/>
-        <location filename="ledvisualiser.ui" line="157"/>
+        <location filename="ledvisualiser.ui" line="146"/>
         <source>LEDVisualiser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25,12 +25,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ledvisualiser.ui" line="107"/>
+        <location filename="ledvisualiser.ui" line="96"/>
         <source>set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="ledvisualiser.ui" line="166"/>
+        <location filename="ledvisualiser.ui" line="155"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>

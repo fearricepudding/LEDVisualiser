@@ -57,15 +57,18 @@ void LEDVisualiser::LEDGetGradient(){
  * @return void
  */
 void LEDVisualiser::updateLocalGradRange(){
-     int fromRange = ui->fromSlider->value();
-     int toRange = ui->toSlider->value();
-     int newR = ui->colR->value();
-     int newB = ui->colB->value();
-     int newG = ui->colG->value();
+    int fromRange = ui->fromSlider->value();
+    int toRange = ui->toSlider->value();
+    QColor newColor = ui->colorPicker->color();
+    int r;
+    int g;
+    int b;
+    int a;
+    newColor.getRgb(&r, &g, &b, &a);
     for (Json::Value::ArrayIndex i = fromRange; i != toRange; i++){
-        _pixels[i]["r"] = newR;
-        _pixels[i]["g"] = newG;
-        _pixels[i]["b"] = newB;
+        _pixels[i]["r"] = r;
+        _pixels[i]["g"] = g;
+        _pixels[i]["b"] = b;
     };
 };
 

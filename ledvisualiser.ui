@@ -70,38 +70,27 @@
      <string>REFRESH</string>
     </property>
    </widget>
+   <widget class="KColorButton" name="colorPicker">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>120</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>420</x>
       <y>120</y>
-      <width>331</width>
-      <height>33</height>
+      <width>221</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QSpinBox" name="colR">
-       <property name="maximum">
-        <number>255</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QSpinBox" name="colG">
-       <property name="maximum">
-        <number>255</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QSpinBox" name="colB">
-       <property name="maximum">
-        <number>255</number>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
       <widget class="QPushButton" name="setRangeColor">
        <property name="text">
         <string>set</string>
@@ -167,6 +156,13 @@
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KColorButton</class>
+   <extends>QPushButton</extends>
+   <header>kcolorbutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
