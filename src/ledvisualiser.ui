@@ -10,6 +10,24 @@
     <height>297</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>663</width>
+    <height>297</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>663</width>
+    <height>297</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>LEDVisualiser</string>
   </property>
@@ -70,17 +88,7 @@
      <string>REFRESH</string>
     </property>
    </widget>
-   <widget class="KColorButton" name="colorPicker">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>120</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -99,13 +107,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>70</y>
       <width>621</width>
-      <height>40</height>
+      <height>52</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
@@ -131,6 +139,19 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="openColorBtn">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>130</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Color</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -138,7 +159,7 @@
      <x>0</x>
      <y>0</y>
      <width>663</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLEDVisualiser">
@@ -149,20 +170,12 @@
    </widget>
    <addaction name="menuLEDVisualiser"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
    </property>
   </action>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KColorButton</class>
-   <extends>QPushButton</extends>
-   <header>kcolorbutton.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

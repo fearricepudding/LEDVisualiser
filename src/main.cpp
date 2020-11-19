@@ -6,6 +6,7 @@
 
 int main(int argc, char *argv[])
 {
+    FreeConsole();
     QApplication a(argc, argv);
     LEDVisualiser w;
     w.show();

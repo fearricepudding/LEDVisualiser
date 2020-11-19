@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <json/json.h>
+#include "colorselector.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LEDVisualiser; }
@@ -22,12 +23,14 @@ public:
     void getPixels();
 
 private slots:
-    void on_toggleButton_clicked();
-    void on_setRangeColor_clicked();
-    void on_updateLocalGrad_clicked();
-    void on_sendNewColButton_clicked();
+    void sendToggle();
+    void setRange();
+    void updateLocalGrad();
+    void sendNewGrad();
+    void openColorSelector();
 
 private:
     Ui::LEDVisualiser *ui;
+    colorSelector *csw = new colorSelector();
 };
 #endif // LEDVISUALISER_H

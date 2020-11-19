@@ -4,7 +4,38 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
-#include <qt/QtWidgets/QLabel>
+#include <QMainWindow>
+#include <QLabel>
+#include <json/json.h>
+
+
+LEDVisualiser::LEDVisualiser(QWidget* parent)
+    : QMainWindow(parent)
+    , ui(new Ui::LEDVisualiser) {
+
+    ui->setupUi(this);
+    getPixels();
+    LEDGetGradient();
+
+    connect(ui->toggleButton, SIGNAL(clicked()), this, SLOT(sendToggle()));
+    connect(ui->openColorBtn, SIGNAL(clicked()), this, SLOT(openColorSelector()));
+    connect(ui->updateLocalGrad, SIGNAL(clicked()), this, SLOT(updateLocalGrad()));
+    connect(ui->sendNewColButton, SIGNAL(clicked()), this, SLOT(sendNewGrad()));
+    connect(ui->setRangeColor, SIGNAL(clicked()), this, SLOT(setRange()));
+};
+
+LEDVisualiser::~LEDVisualiser() {
+    delete ui;
+};
+
+/**
+ * @brief Open Colour selector
+ *
+ * @return void
+ */
+void LEDVisualiser::openColorSelector(){
+    csw->show();
+}
 
 /**
  * @brief send toggle signal to LEDController
@@ -59,41 +90,26 @@ void LEDVisualiser::LEDGetGradient(){
 void LEDVisualiser::updateLocalGradRange(){
     int fromRange = ui->fromSlider->value();
     int toRange = ui->toSlider->value();
-    QColor newColor = ui->colorPicker->color();
-    int r;
-    int g;
-    int b;
-    int a;
-    newColor.getRgb(&r, &g, &b, &a);
+    Json::Value colour = csw->getSetColour();
+    std::cout << "Updaing" << std::endl;
     for (Json::Value::ArrayIndex i = fromRange; i != toRange; i++){
-        _pixels[i]["r"] = r;
-        _pixels[i]["g"] = g;
-        _pixels[i]["b"] = b;
+        _pixels[i]["r"] = colour["r"];
+        _pixels[i]["g"] = colour["g"];
+        _pixels[i]["b"] = colour["b"];
     };
 };
 
-LEDVisualiser::LEDVisualiser(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::LEDVisualiser){
-    ui->setupUi(this);
-    getPixels();
-    LEDGetGradient();
-};
 
-LEDVisualiser::~LEDVisualiser(){
-    delete ui;
-};
-
-void LEDVisualiser::on_toggleButton_clicked(){
+void LEDVisualiser::sendToggle(){
     toggle();
 };
 
-void LEDVisualiser::on_setRangeColor_clicked(){
+void LEDVisualiser::setRange(){
     updateLocalGradRange();
     LEDGetGradient();
 };
 
-void LEDVisualiser::on_updateLocalGrad_clicked(){
+void LEDVisualiser::updateLocalGrad(){
     getPixels();
     LEDGetGradient();
 };
@@ -103,7 +119,7 @@ void LEDVisualiser::on_updateLocalGrad_clicked(){
  *
  * @return void
  */
-void LEDVisualiser::on_sendNewColButton_clicked(){
+void LEDVisualiser::sendNewGrad(){
     http_request newColors("192.168.1.222:8080/newPixels");
     std::stringstream colorString;
     colorString << "pixels=" << _pixels;
